@@ -5,12 +5,6 @@ from bson.objectid import ObjectId
 
 app = Flask(__name__)
 
-# app.config['MONGO_DBNAME'] ='cooking recipes'
-# MONGODB_URI = os.getenv("MONGO_URI")
-# mongo = PyMongo(app)
-
-
-
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP', '0.0.0.0'), 
