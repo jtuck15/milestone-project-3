@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% block content %}
+<!DOCTYPE html>
+
+
+    <div class="col-row-12">
+        <h1>Cookbook Recipes</h1>
+    </div>
+    {% for courses in course %}
+    
+    <h2><a href='{{courses.page_link}}'>{{courses.course}}</a></h2> <br> 
+        <img class='picture-cards' src='{{courses.picture}}'/> <br> <hr>
+    <!--<div class="col-row-12">-->
+    <!--    <h2><a href='starters.html'>Starters</a></h2>-->
+    <!--</div>-->
+    <!--<div class="col-row-12">-->
+    <!--    <h2><a href='maincourse.html'>Main Course</a></h2>-->
+    <!--</div>-->
+    <!--<div class="col-row-12">-->
+    <!--    <h2><a href='dessert.html'>Desserts</a></h2>-->
+    <!--</div>-->
+    <!--<div class="col-row-12">-->
+    <!--    <h2><a href='sides.html'>Sides</a></h2>-->
+    <!--</div>-->
+    {% endfor %}
+
+{% endblock %}
+
