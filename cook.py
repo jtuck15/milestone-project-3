@@ -17,7 +17,40 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/get_meals')
 def get_meals():
-    return render_template('meals.html', course=mongo.db.course.find())
+    return render_template('meals.html', 
+                            course=mongo.db.course.find(), 
+                            starters=mongo.db.starters.find(), 
+                            main_courses=mongo.db.main_courses.find(),
+                            desserts=mongo.db.desserts.find(),
+                            side_dishes=mongo.db.side_dishes.find())
+    
+
+@app.route('/add_meal')
+def add_meal():
+    return render_template('add_meal.html', course=mongo.db.course.find())
+                            
+
+@app.route('/insert_meal', methods=['POST'])
+def insert_meal():
+    starters = mongo.db.starters
+    main_courses = mongo.db.main_courses
+    desserts = mongo.db.desserts
+    side_dishes = mongo.db.side_dishes
+    
+    if 'category' == starters():
+        starters.insert_one(request.form.to_dict())
+        
+    elif 'category' == main_courses():
+        main_courses.insert_one(request.form.to_dict())
+        
+    elif 'category' == desserts():
+        desserts.insert_one(request.form.to_dict())
+        
+    elif 'category' == side_dishes():
+        side_dishes.insert_one(request.form.to_dict())
+        
+    return redirect(url_for('get_meals'))
+    
 
 
 if __name__ == '__main__':

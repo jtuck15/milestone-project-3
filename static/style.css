@@ -1,8 +1,11 @@
+/*body {*/
+    /*margin-left: 20px;*/
+/*}*/
 
 
 
-
-.picture-cards {
-    width: 800px;
+.card {
+    display: inline-block;
+    width: 450px;
     height: 500px;
 }
