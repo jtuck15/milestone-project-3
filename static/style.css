@@ -1,9 +1,10 @@
-/*body {*/
-    /*margin-left: 20px;*/
-/*}*/
+
+all-recipes {
+    text-align: center;
+}
 
 .home-cards {
-    display: inline-block;
+    display: contents;
     margin: 0 10px 0 10px;
     text-align: center;
 }
@@ -13,3 +14,4 @@
     width: 450px;
     height: 500px;
 }
+

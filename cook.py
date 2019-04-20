@@ -28,7 +28,11 @@ def get_meals():
 @app.route('/add_meal')
 def add_meal():
     return render_template('add_meal.html',
-                            course=mongo.db.course.find())
+                            course=mongo.db.course.find(),
+                            starters = mongo.db.starters.find(),
+                            main_courses = mongo.db.main_courses.find(),
+                            desserts = mongo.db.desserts.find(),
+                            side_dishes = mongo.db.side_dishes.find())
                             
 
 @app.route('/insert_meal', methods=['POST'])
@@ -38,16 +42,16 @@ def insert_meal():
     desserts = mongo.db.desserts
     side_dishes = mongo.db.side_dishes
     
-    if starters:
+    if request.form.get('course_name') == 'Starters':
         starters.insert_one(request.form.to_dict())
         
-    elif main_courses:
+    elif request.form.get('course_name') == 'Main Courses':
         main_courses.insert_one(request.form.to_dict())
         
-    elif desserts: 
+    elif request.form.get('course_name') == 'Desserts':
         desserts.insert_one(request.form.to_dict())
         
-    elif side_dishes: 
+    elif request.form.get('course_name') == 'Side Dishes':
         side_dishes.insert_one(request.form.to_dict())
     
     return redirect(url_for('get_meals'))

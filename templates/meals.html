@@ -1,17 +1,10 @@
 {% extends 'base.html' %} {% block content %}
 <!DOCTYPE html>
 
-
-<div class="heading">
-    <h1><i class="material-icons medium">fastfood</i> Cookbook Recipes</h1>
-</div>
-
-<button><a href="{{url_for('add_meal')}}">Add Meal</a></button>
-
 <!--Starters-->
 
 <div class="col s12">
-    <h2><a href='templates/starters.html'>Starters</a></h2>
+    <h2 class='all-recipes'>All Recipes</h2>
 </div>
 {% for starters in starters %}
 <div class="col s4 m4 l4 home-cards">
@@ -33,16 +26,16 @@
             <p><strong>Author: </strong>{{starters.author}}</p>
         </div>
     </div>
-</div>
+<!--</div>-->
 {% endfor %}
 
 <!--Main Courses-->
 
-<div class="col s12">
-    <h2><a href='maincourse.html'>Main Courses</a></h2>
-</div>
+<!--<div class="col s12">-->
+<!--    <h2><a href='maincourse.html'>Main Courses</a></h2>-->
+<!--</div>-->
 {% for main_courses in main_courses %}
-<div class="col s4 m4 l4 home-cards">
+<!--<div class="col s4 m4 l4 home-cards">-->
     <div class="card">
         <div class="card-image waves-effect waves-block waves-light">
             <img class="activator" src="{{main_courses.picture}}">
@@ -61,16 +54,16 @@
             <p><strong>Author: </strong>{{main_courses.author}}</p>
         </div>
     </div>
-</div>
+<!--</div>-->
 {% endfor %}
 
 <!--Desserts-->
 
-<div class="col s12">
-    <h2><a href='dessert.html'></a>Desserts</h2>
-</div>
+<!--<div class="col s12">-->
+<!--    <h2><a href='dessert.html'></a>Desserts</h2>-->
+<!--</div>-->
 {% for desserts in desserts %}
-<div class="col s4 m4 l4 home-cards">
+<!--<div class="col s4 m4 l4 home-cards">-->
     <div class="card">
         <div class="card-image waves-effect waves-block waves-light">
             <img class="activator" src="{{desserts.picture}}">
@@ -89,16 +82,16 @@
             <p><strong>Author: </strong>{{desserts.author}}</p>
         </div>
     </div>
-</div>
+<!--</div>-->
 {% endfor %}
 
 <!--Side Dishes-->
 
-<div class="col s12">
-    <h2><a href='sides.html'></a>Side Dishes</h2>
-</div>
+<!--<div class="col s12">-->
+<!--    <h2><a href='sides.html'></a>Side Dishes</h2>-->
+<!--</div>-->
 {% for side_dishes in side_dishes %}
-<div class="col s4 m4 l4 home-cards">
+<!--<div class="col s4 m4 l4 home-cards">-->
     <div class="card">
         <div class="card-image waves-effect waves-block waves-light">
             <img class="activator" src="{{side_dishes.picture}}">
@@ -117,7 +110,7 @@
             <p><strong>Author: </strong>{{side_dishes.author}}</p>
         </div>
     </div>
-</div>
+<!--</div>-->
 {% endfor %}
 
 
