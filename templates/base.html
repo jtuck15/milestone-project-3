@@ -14,26 +14,35 @@
 
 <body>
     <header>
-        
+
         <!--Navbar for both desktop and mobile-->
-        
+
         <nav>
             <div class="nav-wrapper">
                 <a href="{{url_for('get_meals')}}" class="brand-logo-task">Cookbook Recipes</a>
                 <a href="{{url_for('add_meal')}}" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="{{url_for('get_meals')}}">Home</a></li>
+                    <li><a href="#">Starters</a></li>
+                    <li><a href="#">Main Courses</a></li>
+                    <li><a href="#">Desserts</a></li>
+                    <li><a href="#">Side Dishes</a></li>
                     <li><a href="{{url_for('add_meal')}}">Add Recipe</a></li>
-                </ul>
+
                 <ul class="side-nav" id="mobile-demo">
                     <li><a href="{{url_for('get_meals')}}">Home</a></li>
                     <li><a href="{{url_for('add_meal')}}">New Recipe</a></li>
+                    <li><a href="#">Starters</a></li>
+                    <li><a href="#">Main Courses</a></li>
+                    <li><a href="#">Desserts</a></li>
+                    <li><a href="#">Side Dishes</a></li>
                 </ul>
+
             </div>
         </nav>
     </header>
-    
-        {% block content %} {% endblock %}
+
+    {% block content %} {% endblock %}
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>

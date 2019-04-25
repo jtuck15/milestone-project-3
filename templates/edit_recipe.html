@@ -1,34 +1,38 @@
 {% extends 'base.html' %} {% block content %}
 
 <div class="container">
-    <h3>Add Recipe</h3>
+    <h3>Edit Recipe</h3>
     <div class="row">
-        <form action='{{ url_for('insert_meal') }}' method='POST' class="col s12">
+        <form action="{{ url_for('update_recipe', recipe_id=recipe._id) }}" method="POST" class="col s12">
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">poll</i>
-                    <select id='category' name='course_name'>
+                    <select id='course' name='course_name'>
           <option value="" disabled selected>Choose Course</option>
           {% for c in course %}
-          <option value="{{c.course_name}}">{{c.course_name}}</option>
+            {% if c.course_name == recipe.course_name %}
+            <option value="{{c.course_name}}" selected >{{c.course_name}}</option>
+            {% else %}
+            <option value="{{c.course_name}}" >{{c.course_name}}</option>
+            {% endif %}
           {% endfor %}
         </select>
-                    <label>Course </label>
+                    <label>Courses </label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">assignment</i>
-                    <input id="meal_name" name='meal_name' type="text" class="validate">
+                    <input id="meal_name" name='meal_name' type="text" class="validate" value='{{recipe.meal_name}}'>
                     <label for="icon_prefix">Recipe Name</label>
                 </div>
             </div>
-            
+
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">assignment</i>
-                    <input id="description" name='description' type="text" class="validate">
+                    <input id="description" name='description' type="text" class="validate" value='{{recipe.description}}'>
                     <label for="icon_prefix">Description</label>
                 </div>
             </div>
@@ -36,30 +40,23 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">assignment</i>
-                    <input id="picture" name='picture' type="text" class="validate">
-                    <label for="icon_prefix">Picture (add image url)</label>
+                    <input id="cooking_time" name='cooking_time' type="text" class="validate" value='{{recipe.cooking_time}}'>
+                    <label for="icon_prefix">Cooking Time</label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">assignment</i>
-                    <input id="author" name='author' type="text" class="validate">
+                    <input id="author" name='author' type="text" class="validate" value='{{recipe.author}}'>
                     <label for="icon_prefix">Author</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">assignment</i>
-                    <input id="cooking_time" name='cooking_time' type="text" class="validate">
-                    <label for="icon_prefix">Cooking Time (e.g. 2hrs 15mins)</label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">subject</i>
-                    <textarea name="ingredients" id='ingredients' class='materialize-textarea'></textarea>
+                    <textarea name="ingredients" id='ingredients' class='materialize-textarea'>{{recipe.ingredients}}</textarea>
                     <label for="icon_telephone">Ingredients</label>
                 </div>
             </div>
@@ -67,19 +64,21 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">subject</i>
-                    <textarea name="method" id='method' class='materialize-textarea'></textarea>
+                    <textarea name="method" id='method' class='materialize-textarea'>{{recipe.method}}</textarea>
                     <label for="icon_telephone">Method</label>
                 </div>
             </div>
 
             <div class="row">
-                <button class="btn waves-effect waves-light blue" type="submit" name="action">Add Recipe
-        <i class="material-icons right">playlist_add</i>
-      </button>
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">assignment</i>
+                    <input id="picture" name='picture' type="text" class="validate" value='{{recipe.picture}}'>
+                    <label for="icon_prefix">Picture (use image url)</label>
+                </div>
             </div>
 
-        </form>
+            <button class="btn waves-effect waves-light blue" type="submit" name="action">Save Changes
+            <i class="material-icons right">playlist_add</i>
+            </button>
     </div>
-</div>
-
-{% endblock %}
+    {% endblock %}
