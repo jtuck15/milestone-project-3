@@ -1,0 +1,35 @@
+{% extends 'base.html' %} {% block content %}
+
+<h3><strong>{{recipe.meal_name}}</strong></h3>
+
+<div class="col s5">
+    <div class="card-image">
+            <img src="{{recipe.picture}}">
+        </div>
+</div>
+
+<div class="col s7">
+    <div class="course">Course: 
+        {{recipe.course_name}}
+    </div>
+    <div class="author">Author: 
+        {{recipe.author}}
+    </div>
+    <div class="cooking">Cooking Time: 
+        {{recipe.cooking_time}}
+    </div>
+    <div class="description">Description: 
+        {{recipe.description}}
+    </div>
+    <div class="ingredients">Ingredients: 
+        {{recipe.ingredients}}
+    </div>
+    <div class="method">Method: 
+        {{recipe.method}}
+    </div>
+    <p><a href= "{{url_for('delete_recipe', recipe_id=recipe._id)}}">Delete Recipe</a></p>
+</div>
+
+
+
+{% endblock %}
