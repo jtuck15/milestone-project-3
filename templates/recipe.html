@@ -1,34 +1,32 @@
 {% extends 'base.html' %} {% block content %}
 
-<h3><strong>{{recipe.meal_name}}</strong></h3>
+<!--<div class="container">-->
 
-<div class="col s5">
-    <div class="card-image">
+    <h3><strong>{{recipe.meal_name}}</strong></h3>
+
+    <!--<div class="">-->
+        <div class="card-image col s4 m4 l4">
             <img src="{{recipe.picture}}">
         </div>
-</div>
+    <!--</div>-->
 
-<div class="col s7">
-    <div class="course">Course: 
-        {{recipe.course_name}}
+    <div class="recipe-info col s6 m6 l6">
+        <p class="course">Course: {{recipe.course_name}}
+        </p>
+        <div class="author">Author: {{recipe.author}}
+        </div>
+        <div class="cooking">Cooking Time: {{recipe.cooking_time}}
+        </div>
+        <div class="description">Description: {{recipe.description}}
+        </div>
+        <div class="ingredients">Ingredients: {{recipe.ingredients}}
+        </div>
+        <div class="method">Method: {{recipe.method}}
+        </div>
+        <p><a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}">Edit Recipe</a></p>
+        <p><a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}">Delete Recipe</a></p>
     </div>
-    <div class="author">Author: 
-        {{recipe.author}}
-    </div>
-    <div class="cooking">Cooking Time: 
-        {{recipe.cooking_time}}
-    </div>
-    <div class="description">Description: 
-        {{recipe.description}}
-    </div>
-    <div class="ingredients">Ingredients: 
-        {{recipe.ingredients}}
-    </div>
-    <div class="method">Method: 
-        {{recipe.method}}
-    </div>
-    <p><a href= "{{url_for('delete_recipe', recipe_id=recipe._id)}}">Delete Recipe</a></p>
-</div>
+<!--</div>-->
 
 
 
