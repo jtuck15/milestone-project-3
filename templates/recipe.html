@@ -1,33 +1,33 @@
 {% extends 'base.html' %} {% block content %}
 
-<!--<div class="container">-->
+<h2 class='heading-styles'>{{recipe.meal_name}}</h2>
+<hr class='hr-style'>
 
-    <h3><strong>{{recipe.meal_name}}</strong></h3>
+<div class="card-image col s6">
+    <img src="{{recipe.picture}}">
+</div>
 
-    <!--<div class="">-->
-        <div class="card-image col s4 m4 l4">
-            <img src="{{recipe.picture}}">
-        </div>
-    <!--</div>-->
-
-    <div class="recipe-info col s6 m6 l6">
-        <p class="course">Course: {{recipe.course_name}}
+<div class="recipe-info col s6">
+    <p class="course"><i>Course:</i> {{recipe.course_name}}
+    </p>
+    <p class="author"><i>Author:</i> {{recipe.author}}
+    </p>
+    <p class="cooking"><i>Cooking Time:</i> {{recipe.cooking_time}}
+    </p>
+    <p class="description"><i>Description:</i> {{recipe.description}}
+    </p>
+    <p class="ingredients"><i>Ingredients:</i> {{recipe.ingredients}}
+    </p>
+</div>
+<div class="container">
+    <div class="method col s8 offset-s2">
+        <p class="method-paragraph"><i>Method:</i> <br>
+            <hr> {{recipe.method}}
         </p>
-        <div class="author">Author: {{recipe.author}}
-        </div>
-        <div class="cooking">Cooking Time: {{recipe.cooking_time}}
-        </div>
-        <div class="description">Description: {{recipe.description}}
-        </div>
-        <div class="ingredients">Ingredients: {{recipe.ingredients}}
-        </div>
-        <div class="method">Method: {{recipe.method}}
-        </div>
-        <p><a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}">Edit Recipe</a></p>
-        <p><a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}">Delete Recipe</a></p>
+        <p id='edit-recipe-btn'><a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class='edit-btn'>Edit Recipe</a></p>
+        <p id='delete-recipe-btn'><a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class='delete-btn'>Delete Recipe</a></p>
     </div>
-<!--</div>-->
-
+</div>
 
 
 {% endblock %}

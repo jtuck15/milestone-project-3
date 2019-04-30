@@ -40,11 +40,29 @@ body {
 .card .card-reveal {
     background-color: #000000a1;
     color: #fff;
+    text-shadow: 2px 2px 4px black;
 }
 
 .recipe-info {
     display: inline-block;
+    width: 550px;
+    font-size: 1.3em;
+    margin-left: 50px;
+    text-align: left;
 }
+
+p.course {
+    margin-top: -20px;
+}
+
+.method {
+    font-size: 1.25em;
+    text-align: center;
+}
+
+/*.method-paragraph {*/
+/*    text-align: left;*/
+/*}*/
 
 /*.course {*/
 /*    display: inline-block;*/
@@ -63,6 +81,7 @@ a.brand-logo-task {
 
 div.nav-wrapper {
     font-size: 1.4em;
+    margin-right: 5px;
 }
 
 nav ul a {
@@ -80,6 +99,41 @@ nav ul a {
 h2.heading-styles {
     font-family: 'Cookie';
     font-size: 4.5em;
+}
+
+
+/*-----------Buttons-----------*/
+
+
+.view-btn,
+.edit-btn {
+    border: 2px solid #2196F3;
+    color: white;
+    padding: 5px 10px;
+    background-color: #2196F3;
+    border-radius: 10px;
+}
+
+.delete-btn {
+    border: 2px solid #ff4040;
+    color: white;
+    padding: 5px 10px;
+    background-color: #ff4040;
+    border-radius: 10px;
+}
+
+#edit-recipe-btn,
+#delete-recipe-btn {
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+/*-----------Recipe Page-----------*/
+
+.card-image.col.s6 img {
+    width: 520px;
+    border-radius: 12px;
 }
 
 
@@ -118,6 +172,7 @@ hr.hr-style {
  height: 10px;
 	border: 0;
 	box-shadow: 0 10px 10px -10px #8c8b8b inset;
+	margin-bottom: 20px;
 }
 
 
