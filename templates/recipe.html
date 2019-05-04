@@ -3,11 +3,11 @@
 <h2 class='heading-styles'>{{recipe.meal_name}}</h2>
 <hr class='hr-style'>
 
-<div class="card-image col s6">
+<div class="card-image col s12 m12 l6 xl6">
     <img src="{{recipe.picture}}">
 </div>
 
-<div class="recipe-info col s6">
+<div class="recipe-info col s12 m12 l6 xl6">
     <p class="course"><i>Course:</i> {{recipe.course_name}}
     </p>
     <p class="author"><i>Author:</i> {{recipe.author}}
@@ -24,8 +24,10 @@
         <p class="method-paragraph"><i>Method:</i> <br>
             <hr> {{recipe.method}}
         </p>
-        <p id='edit-recipe-btn'><a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class='edit-btn'>Edit Recipe</a></p>
-        <p id='delete-recipe-btn'><a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class='delete-btn'>Delete Recipe</a></p>
+        <div class="btn-recipes">
+            <p id='edit-recipe-btn'><a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class='edit-btn'>Edit Recipe</a></p>
+            <p id='delete-recipe-btn'><a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class='delete-btn'>Delete Recipe</a></p>
+        </div>
     </div>
 </div>
 

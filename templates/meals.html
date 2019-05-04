@@ -25,11 +25,10 @@
                 <span class="card-title">{{recipe.meal_name}}<i class="material-icons right">close</i></span>
                 <br>
                 <p>{{recipe.description}}</p>
-                <br>
                 <p><strong>Cooking Time: </strong>{{recipe.cooking_time}}</p>
                 <p><strong>Author: </strong>{{recipe.author}}</p>
-                <p><a href="{{url_for('show_recipe', recipe_id=recipe._id)}}" class='view-btn'>View Recipe</a></p>
-                <p><a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class='edit-btn'>Edit Recipe</a></p>
+                <p class='viewBtn'><a href="{{url_for('show_recipe', recipe_id=recipe._id)}}" class='view-btn'>View Recipe</a></p>
+                <p class='editBtn'><a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class='edit-btn'>Edit Recipe</a></p>
             </div>
         </div>
         </div>

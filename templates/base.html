@@ -21,10 +21,10 @@
 
         <!--Navbar for both desktop and mobile-->
 
-        <nav>
+        <nav class='col s12'>
             <div class="nav-wrapper">
                 <a href="{{url_for('get_meals')}}" class="brand-logo-task nav-logo">Cookbook Recipes</a>
-                <a href="{{url_for('add_meal')}}" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li class="hvr-grow"><a href="{{url_for('get_meals')}}">Home</a></li>
                     <li class="hvr-grow"><a href="{{url_for('get_starters')}}">Starters</a></li>
@@ -32,16 +32,21 @@
                     <li class="hvr-grow"><a href="{{url_for('get_desserts')}}">Desserts</a></li>
                     <li class="hvr-grow"><a href="{{url_for('get_sides')}}">Side Dishes</a></li>
                     <li class="hvr-grow"><a href="{{url_for('add_meal')}}">Add Recipe</a></li>
-
-                    <ul class="side-nav" id="mobile-demo">
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
                         <li><a href="{{url_for('get_meals')}}">Home</a></li>
+                        <li class="divider"></li>
                         <li><a href="{{url_for('add_meal')}}">Add Recipe</a></li>
+                        <li class="divider"></li>
                         <li><a href="{{url_for('get_starters')}}">Starters</a></li>
+                        <li class="divider"></li>
                         <li><a href="{{url_for('get_mains')}}">Main Courses</a></li>
+                        <li class="divider"></li>
                         <li><a href="{{url_for('get_desserts')}}">Desserts</a></li>
+                        <li class="divider"></li>
                         <li><a href="{{url_for('get_sides')}}">Side Dishes</a></li>
-                    </ul>
-
+                        <li class="divider"></li>
+                </ul>
             </div>
         </nav>
     </header>
