@@ -168,10 +168,6 @@ p.ingredients {
     text-align: center;
 }
 
-/*.spacing-text {*/
-/*    word-spacing: 0.5em;*/
-/*}*/
-
 /*-----------Cover Picture on Home Page-----------*/
 
 
@@ -207,9 +203,55 @@ hr.hr-style {
  height: 10px;
 	border: 0;
 	box-shadow: 0 10px 10px -10px #8c8b8b inset;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 
+
+/*-----------Buttons-----------*/
+
+footer {
+    height: 150px;
+    width: 100vw;
+    background-color: black;
+    display: block;
+    left: 0;
+    bottom: 0;
+    padding-left: 0;
+    margin-bottom: 0;
+    margin-top: 30px;
+    color: white;
+}
+
+
+.copyright,
+.footer-social {
+    display: inline-block;
+}
+
+footer .footer-social li {
+	display: inline-block;
+	margin-left: 25px;
+}
+
+footer .footer-social li a {
+	color: #FFFFFF;
+}
+
+footer .footer-style.col.s12 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 43px;
+    font-size: 1.3em;
+}
+
+.copyright {
+    margin-right: 100px;
+}
+i.fa.fa-github,
+i.fa.fa-linkedin {
+    font-size: 1.5em;
+}
 
 /*-----------JS Home Button-----------*/
 
@@ -278,5 +320,18 @@ i.material-icons.home-button {
     .recipe-info {
         margin-left: 25px;
         margin-right: 25px;
+    }
+}
+
+@media (max-width: 440px) {
+    i.fa.fa-github,
+    i.fa.fa-linkedin {
+        font-size: 1.2em;
+    }
+    footer .footer-style.col.s12 {
+        font-size: 1.1em;
+    }
+    .copyright {
+        margin-right: 50px;
     }
 }
