@@ -1,14 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Cookie|Indie+Flower|Wendy+One|Acme|Varela+Round');
 
-
-/*body {*/
-/*    background-image: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/VWWAFy05eikrfulkr/spices-in-spoons-and-bowls-moving-on-wooden-background-notebook-for-recipes-lying-at-side-stop-motion-animation_rgz4m2zzg_thumbnail-full01.png');*/
-/*    background-position: center top;*/
-/*    background-repeat: no-repeat;*/
-/*    background-size: cover;*/
-/*}*/
-
-
 body {
     text-align: center;
     font-family: 'Acme';
@@ -220,6 +211,7 @@ footer {
     margin-bottom: 0;
     margin-top: 30px;
     color: white;
+    word-spacing: 2px;
 }
 
 
