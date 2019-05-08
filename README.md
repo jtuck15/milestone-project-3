@@ -76,26 +76,16 @@ I have thoroughly tested this website and was unable to find any broken links wi
 -	Microsoft Edge
 -	Safari
 
-
-### Issues/Bugs
-
-
-
 ### Validation
-
+HTML files passed validation testing at https://validator.w3.org/nu/#textarea <br>
+CSS file passed validation testing at https://jigsaw.w3.org/css-validator/validator
 
 ## Deployment
 
 
 
-## Credits
-
-
-### Content
-
+## Credits/References
+Credits/References can be found can be found [here](https://github.com/jtuck15/milestone-project-3/blob/master/credits.txt)
 
 ### Acknowledgements
 - [Code Institute](https://www.codeinstitute.net/)
-
-
-### References
