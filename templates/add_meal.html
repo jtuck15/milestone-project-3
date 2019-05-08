@@ -7,7 +7,7 @@
         <form action='{{ url_for('insert_meal') }}' method='POST' class="col s12">
             <div class="row">
                 <div class="input-field col s12">
-                    <select id='category' name='course_name'>
+                    <select id='category' name='course_name' required>
           <option value="" disabled selected>Choose Course</option>
           {% for c in course %}
           <option value="{{c.course_name}}">{{c.course_name}}</option>
@@ -19,48 +19,48 @@
 
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="meal_name" name='meal_name' type="text" class="validate">
+                    <input id="meal_name" name='meal_name' type="text" class="validate" required>
                     <label for="icon_prefix">Recipe Name</label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="description" name='description' type="text" class="validate">
+                    <input id="description" name='description' type="text" class="validate" required>
                     <label for="icon_prefix">Description</label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="picture" name='picture' type="text" class="validate">
+                    <input id="picture" name='picture' type="text" class="validate" required>
                     <label for="icon_prefix">Picture (add image url)</label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="author" name='author' type="text" class="validate">
+                    <input id="author" name='author' type="text" class="validate" required>
                     <label for="icon_prefix">Author</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="cooking_time" name='cooking_time' type="text" class="validate">
+                    <input id="cooking_time" name='cooking_time' type="text" class="validate" required>
                     <label for="icon_prefix">Cooking Time (e.g. 2hrs 15mins)</label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
-                    <textarea name="ingredients" id='ingredients' class='materialize-textarea'></textarea>
+                    <textarea name="ingredients" id='ingredients' class='materialize-textarea' required></textarea>
                     <label for="icon_telephone">Ingredients</label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
-                    <textarea name="method" id='method' class='materialize-textarea'></textarea>
+                    <textarea name="method" id='method' class='materialize-textarea' required></textarea>
                     <label for="icon_telephone">Method</label>
                 </div>
             </div>
