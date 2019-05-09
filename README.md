@@ -21,23 +21,23 @@ These can be found at the following links below:
 
 ## Features
 
-### [Home Page](https://)
+### [Home Page](http://jimmys-cookbook.herokuapp.com/get_meals)
 - Cover photo of a chef preparing a meal with a fixed image position to give a nice effect when the user accesses the website.
 - All recipes are displayed on this page for ease of access to the end user.
 
-### [Starters](https://)
+### [Starters](http://jimmys-cookbook.herokuapp.com/get_starters)
 - This page displays all of the meals that are categorised under Starters.
 
-### [Main Courses](https://)
+### [Main Courses](http://jimmys-cookbook.herokuapp.com/get_mains)
 - This page displays all of the meals that are categorised under Main Courses.
 
-### [Desserts](https://)
+### [Desserts](http://jimmys-cookbook.herokuapp.com/get_desserts)
 - This page displays all of the meals that are categorised under Desserts.
 
-### [Side Dishes](https://)
+### [Side Dishes](http://jimmys-cookbook.herokuapp.com/get_sides)
 - This page displays all of the meals that are categorised under Side Dishes.
 
-### [Add Recipe](https://)
+### [Add Recipe](http://jimmys-cookbook.herokuapp.com/add_meal)
 - This page allows a user to add a recipe to the website. It provides a form in which the user enters in all of the required details in order to add the recipe to the site.
 
 ### Edit Recipe Button
@@ -81,8 +81,7 @@ HTML files passed validation testing at https://validator.w3.org/nu/#textarea <b
 CSS file passed validation testing at https://jigsaw.w3.org/css-validator/validator
 
 ## Deployment
-
-
+My website is currently deployed on Heroku - http://jimmys-cookbook.herokuapp.com/get_meals
 
 ## Credits/References
 Credits/References can be found can be found [here](https://github.com/jtuck15/milestone-project-3/blob/master/credits.txt)

@@ -35,7 +35,8 @@ def add_meal():
                             desserts = mongo.db.desserts.find(),
                             side_dishes = mongo.db.side_dishes.find(),
                             all_recipes = mongo.db.all_recipes.find())
-                            
+
+# function to add recipes to the website                            
 
 @app.route('/insert_meal', methods=['POST'])
 def insert_meal():
@@ -44,7 +45,8 @@ def insert_meal():
     all_recipes.insert_one(request.form.to_dict())
     
     return redirect(url_for('get_meals'))
-    
+
+# function to edit recipes on the website    
 
 @app.route('/edit_recipe/<recipe_id>')
 def edit_recipe(recipe_id):
@@ -70,13 +72,15 @@ def update_recipe(recipe_id):
     })
     
     return redirect(url_for('get_meals'))
-    
+
+# function to show the recipe that the user clicks on    
 
 @app.route('/show_recipe/<recipe_id>')
 def show_recipe(recipe_id):
     return render_template('recipe.html',
     recipe=mongo.db.all_recipes.find_one({'_id': ObjectId(recipe_id)}))
 
+# function to delete recipes from the website
 
 @app.route('/delete_recipe/<recipe_id>')
 def delete_recipe(recipe_id):
@@ -103,7 +107,6 @@ def get_sides():
     return render_template('sides.html', all_recipes = mongo.db.all_recipes.find())
     
     
-
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'), 
