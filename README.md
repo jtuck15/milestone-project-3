@@ -17,7 +17,14 @@ The purpose of this project is to create a web application that allows users to 
 ### Wireframe Mockups
 
 These can be found at the following links below:
-
+- https://github.com/jtuck15/milestone-project-3/blob/master/wireframes/addrecipe.jpg
+- https://github.com/jtuck15/milestone-project-3/blob/master/wireframes/desserts.jpg
+- https://github.com/jtuck15/milestone-project-3/blob/master/wireframes/editrecipe.jpg
+- https://github.com/jtuck15/milestone-project-3/blob/master/wireframes/home.jpg
+- https://github.com/jtuck15/milestone-project-3/blob/master/wireframes/mains.jpg
+- https://github.com/jtuck15/milestone-project-3/blob/master/wireframes/sides.jpg
+- https://github.com/jtuck15/milestone-project-3/blob/master/wireframes/starters.jpg
+- https://github.com/jtuck15/milestone-project-3/blob/master/wireframes/viewrecipe.jpg
 
 ## Features
 
