@@ -8,7 +8,7 @@ app = Flask(__name__)
 # connecting to the database
 
 app.config['MONGO_DBNAME'] ='cooking_recipes'
-app.config['MONGO_URI'] = 'mongodb+srv://jtuck15:jt511526@jimmyt-2rj89.mongodb.net/cooking_recipes?retryWrites=true'
+app.config['MONGO_URI'] = 
 
 mongo = PyMongo(app)
 
